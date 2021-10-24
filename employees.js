@@ -144,3 +144,8 @@ console.log(employees)
 */
 
 //CODE HERE 
+manager.getEmployees()
+
+//I think that in order to make this last part function better I would have to create an employee like this.
+let empThree = new Employee("Chad","weekday mornings, weekday afternoons")
+//and changing manager.manages to an array of first name of employees from the employees object 
