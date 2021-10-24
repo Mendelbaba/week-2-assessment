@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name : "New york",
+    price : 12.99,
+    category : "Main dish",
+    popularity : 1,
+    rating : 5,
+    tags : ["gluten", "large", "dairy"]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +97,48 @@
 */
 
 //CODE HERE
-
+let foodArr = [
+    {
+        name : "Detroit style",
+        price : 13.99,
+        category : "Main dish",
+        popularity : 2,
+        rating : 4,
+        tags : ["gluten", "large", "dairy", "puffy"]
+    }, 
+    {
+        name : "New york",
+        price : 12.99,
+        category : "Main dish",
+        popularity : 1,
+        rating : 5,
+        tags : ["gluten", "large", "dairy"]
+    },
+    {
+        name : "Extra Pie",
+        price : 17.99,
+        category : "Main dish",
+        popularity : 3,
+        rating : 5,
+        tags : ["gluten", "large", "dairy","all the toppings on the menu"]
+    },
+    {
+        name : "Boston slice",
+        price : 3.99,
+        category : "Single Meal",
+        popularity : 4,
+        rating : 5,
+        tags : ["gluten", "large", "dairy","stuffed crust"]
+    },
+    {
+        name : "bukhara",
+        price : 6.99,
+        category : "Main dish",
+        popularity : 1,
+        rating : 5,
+        tags : ["gluten", "large", "dairy-free", "meat"]
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,9 +155,22 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(function(element){
+    return element.tags.includes("meat")
+}) 
+console.log(filteredFood)
 
 
+
+// function foodFilter(arr,tag){
+//     for(i = 0; i < arr.length; i++){
+//         if (arr[i].tags.includes(tag)){
+//             return `${arr[i]} has ${tag}`
+//         }
+
+//     }
+// }
+// console.log(foodFilter(foodArr,"meat"))
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +212,12 @@
 */
 
 //CODE HERE
+function filterByProperty(property,number,type){
+    if(type==="above" && property > number){
+        // return not sure how to capture the result here
+    }
 
+}
 
 /*
     Invoke the `filterByProperty` function passing
