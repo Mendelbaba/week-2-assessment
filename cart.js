@@ -37,7 +37,7 @@ const cart = [
 //CODE HERE
 
 const summedPrice = cart.reduce(function(a,b) {
-    return a.price + b.price
+    return {price: a.price + b.price}
 })
 console.log(summedPrice)
 
@@ -57,7 +57,9 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-
+function calcFinalPrice(cartTotal,couponValue,tax){
+    return (cartTotal * tax.toFixed(2)) - couponValue
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -82,7 +84,9 @@ console.log(summedPrice)
 
 /*
     TEXT ANSWER HERE
-
+I will need a customer name as a string. I will need a phone number as a string as well since this information is just being saved and not manipulated in any way so a number is unnecessary for this.
+I will need a price as a number.I will need an items array so things can be taken on and off the order by accessing the array. I will need a status which will be a string. And an address as a string.
+and an order number just in case theres two people  with the same names, and i dont see any reason that this number needs to be manipulated as its only being used as a placeholder/identifier so i will use a string
 */
 
 /*
@@ -91,3 +95,11 @@ console.log(summedPrice)
 */
 
 //CODE HERE
+const customer = {
+    name : "John Doe",
+    number : "222-222-2222",
+    items : ["burger", "Coke", "Fries"],
+    status : "preparing",
+    address : "123 sesame street",
+    orderNum : "120"
+}
